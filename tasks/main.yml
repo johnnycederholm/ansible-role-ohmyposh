@@ -1,5 +1,12 @@
 #SPDX-License-Identifier: MIT-0
 ---
+- name: Install curl
+  ansible.builtin.apt:
+    update_cache: true
+    name:
+      - curl
+    state: present
+
 - name: Download Oh My Posh install script
   ansible.builtin.get_url:
     url: https://ohmyposh.dev/install.sh
