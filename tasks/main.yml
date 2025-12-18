@@ -15,11 +15,3 @@
 - name: Install Oh My Posh
   ansible.builtin.shell:
     cmd: "bash -c /tmp/ohmyposh-install.sh"
-
-- name: Add Oh My Posh to .bashrc
-  ansible.builtin.lineinfile:
-    path: "/home/{{ ansible_user }}/.bashrc"
-    line: 'eval "$(oh-my-posh init bash)"'
-    state: present
-    create: true
-    owner: "{{ ansible_user }}"
