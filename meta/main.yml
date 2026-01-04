@@ -1,7 +1,7 @@
 #SPDX-License-Identifier: MIT-0
 galaxy_info:
   author: Johnny Cederholm
-  description: Installs and configures Oh my posh for Bash
+  description: Installs and configures Oh my posh
   license: MIT
   min_ansible_version: 2.18.7
   galaxy_tags: []

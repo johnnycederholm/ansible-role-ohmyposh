@@ -1,7 +1,7 @@
 Bash - Oh my posh
 =========
 
-Installs and configures Oh my posh for Bash
+Installs and configures Oh my posh
 
 
 Example Playbook
@@ -9,7 +9,10 @@ Example Playbook
 
     - hosts: desktop
       roles:
-         - bash-ohmyposh
+         - name: Install Oh My Posh
+           role: ohmyposh
+           vars:
+             user: ansible
 
 License
 -------

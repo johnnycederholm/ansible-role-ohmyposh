@@ -13,5 +13,10 @@
     mode: '0755'
 
 - name: Install Oh My Posh
-  ansible.builtin.shell:
+  become_user: "{{ user }}"
+  ansible.builtin.command:
     cmd: "bash -c /tmp/ohmyposh-install.sh"
+
+- name: Remove Oh My Posh install script
+  ansible.builtin.command:
+    cmd: "rm /tmp/ohmyposh-install.sh"
